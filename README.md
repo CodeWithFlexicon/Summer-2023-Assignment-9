@@ -3,15 +3,72 @@
 This assignment is an API for managing a recipe management system. It allows users to perform CRUD (Create, Read, Update, Delete) operations on recipe data using Node.js, Express.js, PostgreSQL, and Sequelize.
 Validation from Sequelize is implemented to make sure the user does not exceed text/string limits.
 
-## PostgreSQL
+## Database Setup
 
-PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+This project uses PostgreSQL as the relational database management system and Sequelize as the ORM (Object-Relational Mapping) tool for interacting with the database.
 
-## Sequelize
+### PostgreSQL
 
-Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server. It supports the Node.js environment and uses JavaScript.
+PostgreSQL is a powerful, open-source, and feature-rich database system. It provides reliability, flexibility, and excellent support for complex queries and data types.
 
-## Installation
+To install PostgreSQL, follow the instructions below based on your operating system:
+
+#### macOS
+
+1. Install PostgreSQL using Homebrew package manager by running the following command in the terminal:
+   ```
+   brew install postgresql
+   ```
+2. Start the PostgreSQL service using the following command:
+   ```
+   brew services start postgresql
+   ```
+
+3. PostgreSQL should now be running on your system. You can interact with it using the `psql` command-line tool.
+
+#### Windows
+
+1. Download the PostgreSQL installer from the official website: https://www.postgresql.org/download/windows/
+
+2. Run the downloaded installer and follow the installation wizard.
+
+3. During the installation, you will be prompted to set a password for the default PostgreSQL user ("postgres"). Make sure to remember this password as you will need it later.
+
+4. Complete the installation, and PostgreSQL will be installed on your system.
+
+#### Linux (Ubuntu)
+
+1. Open a terminal and run the following command to install PostgreSQL:
+   ```
+   sudo apt update
+   sudo apt install postgresql
+   ```
+
+2. PostgreSQL should now be installed and running as a service on your system. You can interact with it using the `psql` command-line tool.
+
+### Sequelize
+
+Sequelize is a promise-based Node.js ORM for PostgreSQL and other databases. It provides an easy-to-use API for performing database operations and simplifies the process of connecting and interacting with the database.
+
+To install Sequelize, navigate to your project folder and run the following command:
+
+   ```
+   npm install sequelize
+   ```
+
+Sequelize requires the `pg` package as the PostgreSQL driver. Install it by running:
+
+   ```
+   npm install pg
+   ```
+
+With PostgreSQL and Sequelize set up, you're ready to connect your application to the database and start performing CRUD operations.
+
+Feel free to modify and expand this section based on your specific project requirements and any additional details you want to provide.
+
+## Testing 
+
+Postman was used to test the API endpoints and ensure that all operations were successful. You can use Postman or any other API testing tool to send requests to the API endpoints and verify the functionality.
 
 To test the API, follow these steps:
 
@@ -46,6 +103,3 @@ To test the API, follow these steps:
 - **SQL Queries**: Utilizes SQL queries to interact with the PostgreSQL database and perform the necessary CRUD operations.
 - **Sequelize Validation**: Utilizes Sequelize built-in validation to ensure that database rules are followed. e.g title too short, description too lengthy...
 
-## Testing
-
-Postman was used to test the API endpoints and ensure that all operations were successful. You can use Postman or any other API testing tool to send requests to the API endpoints and verify the functionality.
